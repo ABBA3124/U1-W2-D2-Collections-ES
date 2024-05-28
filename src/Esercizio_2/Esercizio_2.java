@@ -25,11 +25,20 @@ public class Esercizio_2 {
     }
 
 
-    /*
-    2)
-    Scrivere una seconda funzione che accetti una lista e restituisca una nuova lista composta dagli elementi della prima lista
-    seguiti dagli stessi elementi disposti in ordine inverso.
-    */
+    /* 2) Scrivere una seconda funzione che accetti una lista e restituisca una nuova lista composta dagli elementi della prima lista
+    seguiti dagli stessi elementi disposti in ordine inverso.*/
+
+    //funziona che crea una nuova lista con gli elementi della lista originale seguiti dagli stessi elementi in ordine inverso
+    public static List<Integer> addListaSpecchio(List<Integer> lista) {
+        List<Integer> listaSpecchio = new ArrayList<>(lista);
+
+        for (int i = lista.size() - 1; i >= 0; i--) {
+            listaSpecchio.add(lista.get(i));
+        }
+        return listaSpecchio;
+    }
+
+
     /*
     3)
     Scrivere una terza funzione che accetti una lista ed un booleano:
@@ -38,16 +47,36 @@ public class Esercizio_2 {
     stampa i valori in posizioni dispari.
     */
 
+    public static void pariODispari(List<Integer> lista, boolean pari) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (pari && i % 2 == 0) {
+                System.out.println(lista.get(i));
+            } else if (!pari && i % 2 != 0) {
+                System.out.println(lista.get(i));
+            }
+        }
+    }
 
     // main) Creare una main che utilizzi le tre funzioni. Utilizzare l'interfaccia List e l'implementazione ArrayList.
     public static void main(String[] args) {
 
 
         // lista interi casuali ordinati
-        List<Integer> listaCasualeOrdinata = generaListaCasuale(25);
+        List<Integer> listaCasualeOrdinata = generaListaCasuale(15);
         System.out.println("Lista casuale ordinata: " + listaCasualeOrdinata);
 
 
-        //lista secondo es
+        //lista con ordine inverso
+        List<Integer> listaSpecchio = addListaSpecchio(listaCasualeOrdinata);
+        System.out.println("Lista con ordine inverso: " + listaSpecchio);
+//        System.out.println("Lista con ordine inverso: " + addListaSpecchio(listaCasualeOrdinata));
+
+        //valori pari
+        System.out.println("Valori in posizione pari: ");
+        pariODispari(listaCasualeOrdinata, true);
+
+        //valori dispari
+        System.out.println("Valori in posizione dispari: ");
+        pariODispari(listaCasualeOrdinata, false);
     }
 }
