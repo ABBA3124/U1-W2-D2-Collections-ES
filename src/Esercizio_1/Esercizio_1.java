@@ -30,16 +30,16 @@ public class Esercizio_1 {
         }
 
         //parole duplicate
-        if (!paroleDuplicate.isEmpty()) System.out.println("Parole duplicate: " + paroleDuplicate);
+        if (!paroleDuplicate.isEmpty()) System.out.println("\nParole duplicate: " + paroleDuplicate);
 
-        else System.out.println("Non ci sono parole duplicate.");
+        else System.out.println("\nNon ci sono parole duplicate.");
 
 
         //parole distinte
-        System.out.println("Numero di parole distinte: " + paroleDistinte.size());
+        System.out.println("\nNumero di parole distinte: " + paroleDistinte.size());
 
         // parole distinte
-        System.out.println("Elenco delle parole distinte: " + paroleDistinte);
+        System.out.println("\nElenco delle parole distinte: " + paroleDistinte);
 
         scanner.close();
     }

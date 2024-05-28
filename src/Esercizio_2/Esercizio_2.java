@@ -63,20 +63,20 @@ public class Esercizio_2 {
 
         // lista interi casuali ordinati
         List<Integer> listaCasualeOrdinata = generaListaCasuale(15);
-        System.out.println("Lista casuale ordinata: " + listaCasualeOrdinata);
+        System.out.println("\nLista casuale ordinata: " + listaCasualeOrdinata);
 
 
         //lista con ordine inverso
         List<Integer> listaSpecchio = addListaSpecchio(listaCasualeOrdinata);
-        System.out.println("Lista con ordine inverso: " + listaSpecchio);
+        System.out.println("\nLista con ordine inverso: " + listaSpecchio);
 //        System.out.println("Lista con ordine inverso: " + addListaSpecchio(listaCasualeOrdinata));
 
         //valori pari
-        System.out.println("Valori in posizione pari: ");
+        System.out.println("\nValori in posizione pari: ");
         pariODispari(listaCasualeOrdinata, true);
 
         //valori dispari
-        System.out.println("Valori in posizione dispari: ");
+        System.out.println("\nValori in posizione dispari: ");
         pariODispari(listaCasualeOrdinata, false);
     }
 }
